@@ -1,6 +1,7 @@
 <?php
-    $server = "localhost";
-    // mudar isso pra "127.0.0.1:3307" em casa !!!
+    $server = " 127.0.0.1:3307";
+    // localhost
+    // 127.0.0.1:3307
     $user = "root";
     $pass = "";
     $bd = "empresa";
