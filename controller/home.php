@@ -27,10 +27,10 @@
     }
 </style>
 <body>
-    <nav class="navbar navbar-dark fixed-top" style="background-color: #181616ff;">
+    <!-- <nav class="navbar navbar-dark fixed-top" style="background-color: #181616ff;">
   <div class="container-fluid">
-    <a class="navbar-brand" href="home.php">Painel de Cadastros</a>
-    <!-- <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation" style="background-color: #181616ff;">
+     <a class="navbar-brand" href="home.php">Painel de Cadastros</a> 
+     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation" style="background-color: #181616ff;">
       <span class="navbar-toggler-icon"></span>
     </button> -->
     <!-- <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel" >
@@ -61,17 +61,16 @@
           </li>
         </ul>
       </div>
-    </div> -->
+    </div> 
   </div>
-</nav>
+</nav> -->
     <div class="container" id="corpo1">
         <div class="row">
             <div class="col">
                 <div class="container">
-                    <h1 class="display-4">Bem Vindo!</h1>
-                    <p class="lead">Este é um sistema básico da realização de cadastros. Base de estudos para a criação de sistemas Web com PHP e MySQL.</p>
+                    <h1>CadSys</h1>
                     <hr class="my-4">
-                    <p>Acesse nossas funcionalidades.</p>
+                    <p>Acesse nossos serviços.</p>
                     <button data-bs-toggle="modal" data-bs-target="#cadastroModal" id="abrirCadastro" class="btn btn-outline-light btn-lg">Cadastrar</button>
                     <a href="pesquisa.php" class="btn btn-outline-light btn-lg">Pesquisar</a>
                 </div>
