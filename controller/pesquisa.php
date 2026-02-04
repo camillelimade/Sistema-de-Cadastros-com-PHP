@@ -1,3 +1,12 @@
+<?php
+require_once __DIR__ . '/../config/helpers.php';
+
+$limite = 10;
+$pagina = isset($_GET['pagina']) ? (int)$_GET['pagina'] : 1;
+$pagina = ($pagina < 1) ? 1 : $pagina;
+
+$offset = ($pagina - 1) * $limite;
+?>
 <!doctype html>
 <html lang="pt-br">
 
@@ -15,7 +24,10 @@
     $pesquisa = $_POST["busca"] ?? ' ';
     include "conexao.php";
 
-    $sql = "SELECT * FROM pessoas WHERE nome LIKE '%$pesquisa%'";
+   $sql = "SELECT * FROM pessoas 
+        WHERE nome LIKE '%$pesquisa%' 
+        ORDER BY cod_pessoa DESC 
+        LIMIT $limite OFFSET $offset";
     $dados = mysqli_query($conn, $sql);
     ?>
     <style>
@@ -127,6 +139,26 @@
                             
                         </tbody>
                     </table>
+                    <div class="d-flex justify-content-center gap-2 mt-3">
+    <?php if ($pagina > 1): ?>
+        <a class="btn btn-outline-light"
+           href="pesquisa.php?pagina=<?= $pagina - 1 ?>&busca=<?= urlencode($pesquisa) ?>">
+            ⬅ Anterior
+        </a>
+    <?php endif; ?>
+
+    <span class="btn btn-light disabled">
+        Página <?= $pagina ?>
+    </span>
+
+    <?php if (mysqli_num_rows($dados) == $limite): ?>
+        <a class="btn btn-outline-light"
+           href="pesquisa.php?pagina=<?= $pagina + 1 ?>&busca=<?= urlencode($pesquisa) ?>">
+            Próxima ➡
+        </a>
+    <?php endif; ?>
+</div>
+
                     <br>
                 </div>
             </div>

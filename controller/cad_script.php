@@ -91,6 +91,18 @@
         window.addEventListener('DOMContentLoaded', function() {
             document.getElementById('abrirModal').click();
         });
+       
+    window.addEventListener('DOMContentLoaded', function () {
+        document.getElementById('abrirModal').click();
+
+        // Redireciona após 3 segundos se for sucesso
+        <?php if ($classe_alerta == "success") { ?>
+            setTimeout(function () {
+                window.location.href = "home.php";
+            }, 3000);
+        <?php } ?>
+    });
+
     </script>
 </body>
 

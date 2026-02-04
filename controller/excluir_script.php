@@ -1,3 +1,12 @@
+<?php
+
+require_once __DIR__ . '/../config/helpers.php';
+require_once __DIR__ . '/conexao.php';
+
+$id   = $_POST["id"] ?? null;
+$nome = $_POST["nome"] ?? null;
+?>
+
 <!doctype html>
 <html lang="pt-br">
 

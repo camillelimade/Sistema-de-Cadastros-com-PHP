@@ -1,3 +1,9 @@
+<?php
+require_once __DIR__ . '/../config/helpers.php';
+require_once __DIR__ . '/conexao.php';
+
+?>
+
 <!doctype html>
 <html lang="pt-br">
 
